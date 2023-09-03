@@ -20,7 +20,28 @@ return {
       return opts
     end,
   },
+  { "NvChad/nvim-colorizer.lua", disable = true },
+  {
+    "mattn/emmet-vim",
+  },
+  {
+    "pantharshit00/vim-prisma",
+  },
+  {
+    "brenoprata10/nvim-highlight-colors",
+    config = function()
+      require("nvim-highlight-colors").setup {
+        enable_tailwind = true,
+      }
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/planery.nvim",
+    config = function() require("todo-comments").setup {} end,
+  },
   -- You can disable default plugins as follows:
+  -- { "max397574/better-escape.nvim", enabled = false },
   -- { "max397574/better-escape.nvim", enabled = false },
   --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
